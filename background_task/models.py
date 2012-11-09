@@ -18,7 +18,8 @@ class TaskManager(models.Manager):
         now = datetime.now()
         qs = self.unlocked(now)
         ready = qs.filter(run_at__lte=now, failed_at=None)
-        return ready.order_by('-priority', 'run_at')
+        #return ready.order_by('-priority', 'run_at')
+        return ready.order_by('run_at')
 
     def unlocked(self, now):
         max_run_time = getattr(settings, 'MAX_RUN_TIME', 3600)
