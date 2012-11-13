@@ -2,6 +2,8 @@
 *.pyc
 *.swp
 .DS_Store
+.project
+.pydevproject
 /django_background_task.egg-info
 /html_coverage
 /bin
@@ -10,3 +12,4 @@
 /src
 /include
 /dist
+/build
